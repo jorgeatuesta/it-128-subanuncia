@@ -21,4 +21,9 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+rails generate scaffold category name:string description:string
+rails generate scaffold announcement title:string body:string image:string status:integer cause:string publication:datetime category:references
+rails generate scaffold message title:string body:string status:integer
+rails generate scaffold historyAnnouncement title:string body:string image:string status:integer cause:string publication:datetime category:references
+rails generate scaffold role name:string
+
