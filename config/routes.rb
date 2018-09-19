@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root  'home#init'
   resources :roles
   resources :history_announcements
   resources :messages
