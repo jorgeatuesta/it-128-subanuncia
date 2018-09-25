@@ -287,4 +287,12 @@ Devise.setup do |config|
   # ActiveSupport.on_load(:devise_failure_app) do
   #   include Turbolinks::Controller
   # end
+  
+  config.jwt do |jwt|
+    jwt.secret = "secret" # ENV['DEVISE_JWT_SECRET_KEY']
+    jwt.dispatch_requests = [
+                              ['POST', %r{^/authentication_tokens/create$}]
+                            ]
+
+	end
 end

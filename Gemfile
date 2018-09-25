@@ -41,6 +41,12 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Gema para autenticacion
 gem 'devise'
 
+# Gema para JWT con Devise
+gem 'devise-jwt'
+
+# povides support for Cross-Origin Resource Sharing (CORS) for Rack compatible web applications.
+gem 'rack-cors', require: 'rack/cors'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
