@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :announcements
   resources :categories
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  post '/authentication_tokens/create', to: "authentication_tokens#create"
+  devise_scope :user do
+		post 'authentication_tokens/create', to: "authentication_tokens#create"
+  end
 
 end
