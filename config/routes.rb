@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
+  #devise_for :users
+  devise_for :users, controllers: {
+      registrations: 'users/registrations',
+      users: 'users/sessions'
+  }
   root  'home#init'
   resources :roles
   resources :history_announcements
